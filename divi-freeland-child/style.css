@@ -12,7 +12,7 @@
 
 ------------------------------ ADDITIONAL CSS HERE ------------------------------*/
 
-/*--- SINGLE PRODUCT PAGE BUTTON STYLING ---*/
+/*--- SINGLE PRODUCT PAGE BUTTON ---*/
 a#contact.button.alt.contact {
     background-color: #8b8c6c;
 }
@@ -26,7 +26,7 @@ a#contact.button.alt.contact:hover {
     background-color: #00000066 !important;
 }
 
-/*--- CONTACT FORM BUTTON STYLING ---*/
+/*--- CONTACT FORM BUTTON ---*/
 input#gform_submit_button_1.gform_button.button{
     background-color: #8b8c6c !important;
     color: #fffbf4 !important;
@@ -43,12 +43,12 @@ input, textarea, select {
     border-radius: 4px;
 }
 
-/*--- A LITTLE PADDING FOR MOBILE HEADINGS ---*/
+/*--- MOBILE HEADING ---*/
 h1.entry-title {
     padding-top: 15px;
 }
 
-/*--- PRODUCT LIST PAGE STYLING --*/
+/*--- PRODUCT LIST PAGE --*/
 ul.products {
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@ ul.products {
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-size: 2em;
+    max-width: 350px;
 }
 
 .woocommerce ul.products li.product .price, .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price, .woocommerce-page ul.products li.product .price del {
@@ -79,7 +80,7 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
 }
 
 span.et_shop_image {
-    flex-grow: 0;
+    max-width: 250px;
 }
 
 .mediatree-wcproductdetail-wrapper {
@@ -87,6 +88,14 @@ span.et_shop_image {
     flex-grow: 2;
 }
 
+/* Prices */
+span.woocommerce-Price-amount.amount {
+    font-size: 1.2em;
+}
+
+.woocommerce-page ul.products li.product .price del {
+    font-size: .8em;
+}
 
 
 @media (max-width: 980px) and (min-width: 768px){
