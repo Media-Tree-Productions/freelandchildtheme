@@ -92,6 +92,7 @@ span.et_shop_image {
 /* Prices */
 span.woocommerce-Price-amount.amount {
     font-size: 1.2em;
+    color: #333;
 }
 
 .woocommerce-page ul.products li.product .price del {
