@@ -61,6 +61,7 @@ ul.products {
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-size: 2em;
     max-width: 350px;
+    padding: 0;
 }
 
 .woocommerce ul.products li.product .price, .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price, .woocommerce-page ul.products li.product .price del {
