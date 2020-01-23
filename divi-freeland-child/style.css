@@ -68,7 +68,6 @@ ul.products {
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-size: 2em;
-    max-width: 350px;
     padding: 0;
 }
 
@@ -81,12 +80,16 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
     width: 100%;
 }
 
+.woocommerce ul.products li.product a {
+    color: initial;
+}
+
 span.et_shop_image {
-    max-width: 250px;
+    min-width: 250px;
 }
 
 .mediatree-wcproductdetail-wrapper {
-    margin: 0 1em;
+    margin: 0 0 0 1em;
 }
 
 /* Prices */
@@ -126,4 +129,11 @@ span.woocommerce-Price-amount.amount {
     }
     .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title {
         text-align: center;
+}
+}
+
+@media (max-width: 479px){
+    span.et_shop_image {
+        min-width: 180px;
+    }
 }

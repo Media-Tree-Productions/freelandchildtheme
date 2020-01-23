@@ -2,9 +2,9 @@
 
 /**
 
- * @author MTteam
+ * @author MediaTree Advertising
 
- * @copyright 2020
+ * @copyright Freeland Automotive Group 2020
 
  */
 
@@ -78,4 +78,12 @@ function populate_referral_url( $form ){
     // Return that value to the form
     return esc_url_raw($refurl);
 }
+
+// Add product Excerpt into Arhive List Items
+function product_excerpt_in_product_archives() {
+     
+    the_excerpt();
+     
+}
+add_action( 'woocommerce_after_shop_loop_item_title', 'product_excerpt_in_product_archives', 40 );
 ?>
