@@ -78,4 +78,20 @@ function populate_referral_url( $form ){
     // Return that value to the form
     return esc_url_raw($refurl);
 }
+
+// Add product Excerpt into Arhive List Items
+function product_excerpt_in_product_archives() {
+
+    the_excerpt();
+
+}
+add_action( 'woocommerce_after_shop_loop_item_title', 'product_excerpt_in_product_archives', 40 );
+
+
+// Remove WooCommerce Short Description
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+
+function woocommerce_template_single_excerpt() {
+                return;
+}
 ?>
