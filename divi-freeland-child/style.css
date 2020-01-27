@@ -54,6 +54,15 @@ ul.products {
     flex-direction: column;
 }
 
+/*--- HIGHLIGHTED TEXT ---*/
+.hightext{
+    font-size: 22px !important;
+    font-family: Lato !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    line-height: 1.3em;
+}
+
 .woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
     width: 100%
 }
