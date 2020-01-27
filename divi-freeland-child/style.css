@@ -42,6 +42,12 @@ input#gform_submit_button_1.gform_button.button{
 input, textarea, select {
     border-radius: 4px;
 }
+/*--- CONTACT FORM TITLE ---*/
+.gform_wrapper h3.gform_title{
+	font-family: Teko !important;
+	font-size: 30px !important;
+	font-weight: 500 !important;
+}
 
 /*--- MOBILE HEADING ---*/
 h1.entry-title {
