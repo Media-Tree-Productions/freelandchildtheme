@@ -103,8 +103,9 @@ span.et_shop_image {
 
 .woocommerce ul.products li.product .woocommerce-placeholder {
     border: none;
-    max-width: 250px;
+    max-width: 300px;
     min-width: 180px;
+}
 
 /* Prices */
 span.woocommerce-Price-amount.amount {
