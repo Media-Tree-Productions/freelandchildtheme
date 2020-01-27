@@ -12,7 +12,7 @@
 
 ------------------------------ ADDITIONAL CSS HERE ------------------------------*/
 
-/*--- SINGLE PRODUCT PAGE BUTTON STYLING ---*/
+/*--- SINGLE PRODUCT PAGE BUTTON ---*/
 a#contact.button.alt.contact {
     background-color: #8b8c6c;
 }
@@ -26,7 +26,7 @@ a#contact.button.alt.contact:hover {
     background-color: #00000066 !important;
 }
 
-/*--- CONTACT FORM BUTTON STYLING ---*/
+/*--- CONTACT FORM BUTTON ---*/
 input#gform_submit_button_1.gform_button.button{
     background-color: #8b8c6c !important;
     color: #fffbf4 !important;
@@ -42,24 +42,39 @@ input#gform_submit_button_1.gform_button.button{
 input, textarea, select {
     border-radius: 4px;
 }
+/*--- CONTACT FORM TITLE ---*/
+.gform_wrapper h3.gform_title{
+	font-family: Teko !important;
+	font-size: 30px !important;
+	font-weight: 500 !important;
+}
 
-/*--- A LITTLE PADDING FOR MOBILE HEADINGS ---*/
+/*--- MOBILE HEADING ---*/
 h1.entry-title {
     padding-top: 15px;
 }
 
-/*--- PRODUCT LIST PAGE STYLING --*/
+/*--- PRODUCT LIST PAGE --*/
 ul.products {
     display: flex;
     flex-direction: column;
 }
 
 .woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
-    width: 100%
+    width: 100%;
+    background: #d7d5ce;
+    padding: 1em;
+    border-radius: 4px;
+    border: transparent 4px solid;
+}
+
+.woocommerce ul.products.columns-3 li.product:hover, .woocommerce-page ul.products.columns-3 li.product:hover {
+    border: #8b8c6c 4px solid;
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title {
     font-size: 2em;
+    padding: 0;
 }
 
 .woocommerce ul.products li.product .price, .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price, .woocommerce-page ul.products li.product .price del {
@@ -71,22 +86,27 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
     width: 100%;
 }
 
-.product-details-wrapper {
-    margin: 0 1em;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
+.woocommerce ul.products li.product a {
+    color: initial;
 }
 
 span.et_shop_image {
-    flex-grow: 0;
+    min-width: 250px;
 }
 
 .mediatree-wcproductdetail-wrapper {
-    margin: 0 1em;
-    flex-grow: 2;
+    margin: 0 0 0 1em;
 }
 
+/* Prices */
+span.woocommerce-Price-amount.amount {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.woocommerce-page ul.products li.product .price del {
+    font-size: .8em;
+}
 
 
 @media (max-width: 980px) and (min-width: 768px){
@@ -101,10 +121,25 @@ span.et_shop_image {
 }}
 
 @media (max-width: 767px){
-.woocommerce-page ul.products li.product:nth-child(n) {
-    width: 100%!important;
+    .woocommerce-page ul.products li.product:nth-child(n) {
+        width: 100%!important;
+    }
+    a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mediatree-wcproductdetail-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        text-align: center;
 }
-a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
-    flex-direction: column;
 }
+
+@media (max-width: 479px){
+    span.et_shop_image {
+        min-width: 180px;
+    }
 }
