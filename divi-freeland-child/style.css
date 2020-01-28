@@ -61,7 +61,8 @@ ul.products {
 }
 
 .woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
-    width: 100%;
+    width: 100%!important;
+    max-width: 1090px;
     background: #d7d5ce;
     padding: 1em;
     border-radius: 4px;
@@ -90,12 +91,20 @@ a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
     color: initial;
 }
 
+.mediatree-wcproductdetail-wrapper {
+    margin: 0 0 0 1em;
+}
+
+/* Images */
+
 span.et_shop_image {
     min-width: 250px;
 }
 
-.mediatree-wcproductdetail-wrapper {
-    margin: 0 0 0 1em;
+.woocommerce ul.products li.product .woocommerce-placeholder {
+    border: none;
+    max-width: 300px;
+    min-width: 180px;
 }
 
 /* Prices */
