@@ -95,4 +95,3 @@ function woocommerce_template_single_excerpt() {
                 return;
 }
 ?>
-
