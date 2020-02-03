@@ -35,7 +35,7 @@ function add_contact_button() {
 // Purchase Process Explanation for Single Product Page
 function add_purchase_process_explanation() {
 	echo		
-		'<div class="row" style="margin-bottom: 20px;"><h3>Carefully Curated Copy</h3><span><p>Lasdfadsrem ipsum val verbedum aborensis y principitus mastodontus comulentus...</p></span></div>';
+		'<div class="row" style="margin-bottom: 20px; margin-top: -20px;"><!--<h3>Carefully Curated Copy</h3>--><span><p>This price is available for commercial business owners only and excludes tax, tag, and registration fees. Please contact us with your business information for finalized pricing, as this number only reflects general incentives.</p></span></div>';
 }
 
 
@@ -95,4 +95,3 @@ function woocommerce_template_single_excerpt() {
                 return;
 }
 ?>
-
