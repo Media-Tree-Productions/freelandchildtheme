@@ -10,11 +10,7 @@
 
 if (!defined('ABSPATH')) die();
 
-
-
 function ds_ct_enqueue_parent() { wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' ); }
-
-
 
 function ds_ct_loadjs() {
 
@@ -37,8 +33,6 @@ function add_purchase_process_explanation() {
 	echo		
 		'<div class="row" style="margin-bottom: 20px; margin-top: -20px;"><!--<h3>Carefully Curated Copy</h3>--><span><p>This price is available for commercial business owners only and excludes tax, tag, and registration fees. Please contact us with your business information for finalized pricing, as this number only reflects general incentives.</p></span></div>';
 }
-
-
 
 add_action( 'wp_enqueue_scripts', 'ds_ct_enqueue_parent' );
 
@@ -94,4 +88,9 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 function woocommerce_template_single_excerpt() {
                 return;
 }
-?>
+
+// Add Slider to Inventory Page
+add_action('woocommerce_before_main_content', 'inventory_slider');
+function inventory_slider () {
+    echo '<div style="width: 100%; min-width: 100%; height: auto;"><img src="https://freelandtrucks.com/wp-content/uploads/2020/02/inventorybanner-e1580915210425.jpg" alt="Browse Our Wide Inventory!"></div>';
+}
