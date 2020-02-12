@@ -1,13 +1,13 @@
 #! /bin/bash
 OutFileName="merged-records.csv"
-SaveAddress="/var/www/staging/wp-content/uploads/wpallimport/merged-records.csv"
+SaveAddress="../wpallimport/merged-records.csv"
 i=0
-if test -f merged-records.csv ; then
+if test -f "$SaveAddress" ; then
 	if test -f ../inventory-backups/merged-records-old.csv ; then
 		rm ../inventory-backups/merged-records-old.csv
 	fi
-	cp merged-records.csv ../inventory-backups/merged-records-old.csv
-	rm merged-records.csv
+	cp "$SaveAddress" ../inventory-backups/merged-records-old.csv
+	rm "$SaveAddress"
 fi
 for filename in ./*.csv; do
         if [ "$filename" != "$OutFileName" ] ; then
