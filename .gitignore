@@ -1,1 +1,6 @@
 .style.css.swp
+
+# Ignore generated files and directories
+wp-content/uploads/inventory/*.csv
+wp-content/uploads/inventory/backups
+wp-content/uploads/wpallimport/files/*.csv
