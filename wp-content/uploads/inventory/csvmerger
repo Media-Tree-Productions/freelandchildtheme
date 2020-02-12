@@ -1,6 +1,6 @@
 #! /bin/bash
 OutFileName="merged-records.csv"
-SaveAddress="../wpallimport/merged-records.csv"
+SaveAddress="../wpallimport/files/merged-records.csv"
 i=0
 if test -f "$SaveAddress" ; then
 	if test -f ../inventory-backups/merged-records-old.csv ; then
