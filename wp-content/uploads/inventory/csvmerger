@@ -1,4 +1,9 @@
 #! /bin/bash
+
+if test -f merged-records.csv ; then
+	cp merged-records.csv ../inventory-backups/merged-records-old.csv
+	rm merged-records.csv
+fi
 OutFileName="merged-records.csv"
 i=0
 for filename in ./*.csv; do
