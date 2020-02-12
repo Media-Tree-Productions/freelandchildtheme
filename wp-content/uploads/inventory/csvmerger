@@ -1,11 +1,14 @@
 #! /bin/bash
-
+OutFileName="merged-records.csv"
+SaveAddress="/var/www/staging/wp-content/uploads/wpallimport/merged-records.csv"
+i=0
 if test -f merged-records.csv ; then
+	if test -f ../inventory-backups/merged-records-old.csv ; then
+		rm ../inventory-backups/merged-records-old.csv
+	fi
 	cp merged-records.csv ../inventory-backups/merged-records-old.csv
 	rm merged-records.csv
 fi
-OutFileName="merged-records.csv"
-i=0
 for filename in ./*.csv; do
         if [ "$filename" != "$OutFileName" ] ; then
                 if [[ $i -eq 0 ]] ; then
@@ -15,3 +18,7 @@ for filename in ./*.csv; do
                 ((i++))
         fi
 done
+if test -f "$SaveAddress" ; then
+	rm "$SaveAddress"
+	cp "$OutFileName" "$SaveAddress"
+fi
