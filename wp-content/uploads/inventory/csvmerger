@@ -3,12 +3,12 @@ OutFileName="merged-records.csv"
 WpaPath="../wpallimport/files/"
 i=0
 if [ ! -d backups ]; then
-	mkdir backups
+        mkdir backups
 fi
 
 if test -f $OutFileName ; then
-	mv $OutFileName ./backups/merged-records-old.csv
-	echo "backedup $OutFileName to backups"
+        mv $OutFileName ./backups/merged-records-old.csv
+        echo "backedup $OutFileName to backups"
 fi
 
 for filename in ./*.csv; do
@@ -22,10 +22,10 @@ for filename in ./*.csv; do
 done
 
 if test -f $WpaPath$OutFileName ; then
-	echo "replacing $WpaPath$OutFileName"
+        echo "replacing $WpaPath$OutFileName"
         rm $WpaPath$OutFileName
-	cp $OutFileName $WpaPath$OutFileName
+        cp $OutFileName $WpaPath$OutFileName
 else
-	echo "creating $WpaPath$OutFileName"
+        echo "creating $WpaPath$OutFileName"
         cp $OutFileName $WpaPath$OutFileName
 fi
