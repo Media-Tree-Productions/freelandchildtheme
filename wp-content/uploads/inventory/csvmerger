@@ -6,24 +6,25 @@ if [ ! -d backups ]; then
 	mkdir backups
 fi
 
-if test -f "$OutFileName" ; then
-	mv "$OutFileName" backups/merged-records-old.csv
+if test -f $OutFileName ; then
+	mv $OutFileName ./backups/merged-records-old.csv
 	echo "backedup $OutFileName to backups"
 fi
 
 for filename in ./*.csv; do
-        if [ "$filename" != "$OutFileName" ] ; then
+        if [ $filename != $OutFileName ] ; then
                 if [[ $i -eq 0 ]] ; then
-                        head -1 "$filename" > "$OutFileName"
+                        head -1 $filename > $OutFileName
                 fi
-                tail -n +2 "$filename" >> "$OutFileName"
+                tail -n +2 $filename >> $OutFileName
                 ((i++))
         fi
 done
 
-if test -f "$WpaPath$OutFileName" ; then
+if test -f $WpaPath$OutFileName ; then
 	echo "replacing $WpaPath$OutFileName"
-	mv $OutFileName $WpaPath$OutFileName
+        rm $WpaPath$OutFileName
+	cp $OutFileName $WpaPath$OutFileName
 else
 	echo "creating $WpaPath$OutFileName"
         cp $OutFileName $WpaPath$OutFileName
