@@ -94,4 +94,16 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 function woocommerce_template_single_excerpt() {
                 return;
 }
+
+function my_custom_mime_types ($mimes) {
+
+$mimes['webp'] = 'image/webp';
+$mimes['jfif'] = 'image/pjpeg';
+ 
+// Optional. Remove a mime type.
+unset( $mimes['exe'] );
+ 
+return $mimes;
+}
+add_filter( 'upload_mimes', 'my_custom_mime_types' );
 ?>
