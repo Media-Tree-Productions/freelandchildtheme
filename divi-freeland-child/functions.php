@@ -95,12 +95,13 @@ function woocommerce_template_single_excerpt() {
                 return;
 }
 
+// Adds Webp and Jfif as Uploadable Media types
 function my_custom_mime_types ($mimes) {
 
 $mimes['webp'] = 'image/webp';
 $mimes['jfif'] = 'image/pjpeg';
  
-// Optional. Remove a mime type.
+// Removes exe mime type just in case
 unset( $mimes['exe'] );
  
 return $mimes;
