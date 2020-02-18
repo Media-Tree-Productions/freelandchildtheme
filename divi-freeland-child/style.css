@@ -54,6 +54,12 @@ h1.entry-title {
     padding-top: 15px;
 }
 
+/*--- MENU & NAVIGATION STYLING ---*/
+
+#top-menu li li a {
+    padding: 5px 5px;
+}
+
 /*--- PRODUCT LIST PAGE --*/
 ul.products {
     display: flex;
