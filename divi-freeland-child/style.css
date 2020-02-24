@@ -190,3 +190,16 @@ span.woocommerce-Price-amount.amount {
         min-width: 180px;
     }
 }
+
+/*------------------------------ DIVI CAROUSEL PLUGIN  ------------------------------*/
+.mt-divi-carousel .dica-item .dica-item-content {
+    padding: 0px;
+}
+
+.mt-divi-carousel .dica-item .dica-item-content .item-title {
+    padding: 24px 24px 0;
+} 
+
+.mt-divi-carousel .dica-item .dica-item-content .content {
+    padding: 24px;
+}
